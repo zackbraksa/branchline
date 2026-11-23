@@ -1,0 +1,3 @@
+Built-in image_gen edit of the approved Branchline icon.
+Keep the rounded translucent lavender tile and three-node branching graph. Increase contrast in the glass glyph: use a saturated deep violet core with clearly defined lavender highlights and a crisp silhouette that stays legible at 48–64 px. Preserve the soft glass reflections, bevels and internal shadows. Keep the tile front-facing and isolated on transparency; remove all exterior specks, labels and presentation background.
+Packaging: crop the tile, normalize it to an 824-pixel tile within a 1024-pixel canvas, retain alpha and export all macOS icon resolutions using script/render_icon.swift.

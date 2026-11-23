@@ -1,0 +1,5 @@
+Generated with the built-in image_gen tool using the approved porcelain-and-glass close-up finish. The full prompt is in Assets/PorcelainGlassIcon.prompt.txt.
+
+Master: Assets/PorcelainGlassIcon.png, an opaque full-bleed square with a violet three-node Git branch graph on porcelain white. Run swift script/render_icon.swift from the app directory to render 16–1024px sizes and package Assets/Branchline.icns. The renderer adds one rounded 824-pixel tile inside a transparent 1024-pixel canvas. Copy Assets/AppIcon.png to site/assets/AppIcon.png after rendering.
+
+Assets/AppIcon.icon is the native adaptive icon compiled by script/bundle.py. Default.png must remain byte-identical to Assets/PorcelainGlassIcon.png. After approving new master artwork, copy it to Assets/AppIcon.icon/Assets/Default.png and regenerate the transparent Foreground.png using Assets/AdaptiveIcon.prompt.txt while preserving the symbol geometry and placement. Foreground.png supplies dark, tinted and clear appearances; the approved opaque Default remains unchanged. Keep the classic AppIcon.png and Branchline.icns exports as the fallback.

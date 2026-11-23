@@ -1,0 +1,18 @@
+Current approved composition (2026-11-15):
+Preserve the exact glass symbol geometry and alpha from AppIcon.icon/Assets/MonoForeground.png.
+Map its original sRGB luminance monotonically through lavender edge #A77EC9
+(at 0.25), frosted lilac body #D8B9F4 (at 0.608), and near-white #FFF7FF
+(at 1.0), retaining the original glass lighting variation. Keep every alpha
+byte unchanged. Composite the recolored symbol with source-over blending, on a full-bleed opaque sRGB
+linear gradient from #A044F4 at upper-left to #6424C7 at lower-right. No outer
+mask, added tile bevel, extra reflections or symbol redraw. Native default and
+dark appearances use this same composition; tinted and clear retain the native
+original source in MonoForeground.png. Reproduce with swift script/render_icon.swift.
+
+Original symbol generation prompt (retained for provenance):
+
+Use case: stylized-concept. Asset type: FINAL SINGLE APP ICON MASTER, an opaque square image for an Apple app asset catalog.
+Style reference: the supplied porcelain-and-glass icon close-up sheet. Reproduce the same refined glass optical finish, precise silhouette and quiet white porcelain face, but output ONLY ONE icon's full-bleed artwork.
+CRITICAL PRODUCTION COMPOSITION: perfectly square image, solid very pale neutral white porcelain background extending completely to ALL FOUR edges and ALL FOUR corners. DO NOT draw an outer rounded-square tile, border, tile bevel, frame, display surface, drop shadow for the tile, or surrounding margin. The entire canvas is the flat porcelain face. The operating system and renderer add the outer squircle later. No transparent pixels. No typography, captions, lettering, watermark, studio setting, floor or extra objects.
+The central symbol must fit within the central 66 percent of canvas width/height, centered optically with generous equal quiet margins. Camera exactly front-on orthographic. Single consistent upper-left soft light. Thin saturated optical glass object with broad almost-flat front faces, crisp fine polished edges, minimal shallow thickness, faint tight contact shadow falling just down-right directly onto porcelain. Translucent intersections genuinely mix color. Restrained white edge highlights, richer color at material thickness. No bloomy glow, puffy jelly, inflated blobs, thick plastic, giant reflections or heavy shadows. Premium restrained dimensional craft, clear at 32px. Original artwork, no Apple logos.
+Subject: EXACTLY the lower-right Branchline symbol from the reference: violet Git branch graph, one vertical stem joining two large circular nodes at top-left and bottom-left, and a single diagonal branch rising toward a third circular node at upper-right. Three nodes total, same diameter. Clear proper Git branch silhouette, NOT a generic three-spoke share icon. Flat polished violet glass, large negative spaces.
