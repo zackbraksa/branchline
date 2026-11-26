@@ -1,8 +1,8 @@
 {
   "appName": "Branchline",
   "bundleIdentifier": "xyz.braksa.apps.branchline",
-  "version": "0.1.0",
-  "build": 1,
+  "version": "0.1.1",
+  "build": 2,
   "minimumMacOS": "14.0",
   "baseURL": "https://branchline.braksa.xyz",
   "feedPath": "/updates/appcast.xml",

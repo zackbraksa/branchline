@@ -4,7 +4,7 @@
 <h1 align="center">Branchline</h1>
 <p align="center"><strong>A native Git history and sync app for macOS.</strong></p>
 <p align="center">
-  <strong><a href="https://github.com/zackbraksa/branchline/releases/download/v0.1.0/Branchline-0.1.0.dmg">Download Branchline for macOS</a></strong><br>
+  <strong><a href="https://github.com/zackbraksa/branchline/releases/download/v0.1.1/Branchline-0.1.1.dmg">Download Branchline for macOS</a></strong><br>
   macOS 14 or later · Apple silicon and Intel
 </p>
 
