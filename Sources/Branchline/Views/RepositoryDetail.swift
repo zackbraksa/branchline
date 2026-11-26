@@ -9,7 +9,13 @@ struct RepositoryDetail: View {
     @State private var selectedSearchResult: String?
 
     private var selectedCommit: Commit? { store.commits.first { $0.id == store.selectedCommitID } }
-    private var branchOptions: [GitRef] { store.refs.filter { $0.kind == .localBranch || (store.includeRemotes && $0.kind == .remoteBranch) } }
+    private var branchOptions: [BranchHistoryPicker.Option] {
+        let includeRemotes = store.includeRemotes
+        return store.refs.compactMap { ref in
+            guard ref.kind == .localBranch || (includeRemotes && ref.kind == .remoteBranch) else { return nil }
+            return BranchHistoryPicker.Option(name: ref.name, fullName: ref.fullName, isDefaultBranch: ref.isDefaultBranch)
+        }
+    }
 
     private var retryFailedAction: (() -> Void)? {
         guard store.canRetryFailedOperation else { return nil }
@@ -58,9 +64,9 @@ struct RepositoryDetail: View {
     private var historyContent: some View {
         VStack(spacing: 0) {
             HStack(spacing: 12) {
-                Picker("History filter", selection: Binding(get: { store.branchFilter ?? "" }, set: { store.setBranch($0.isEmpty ? nil : $0) })) {
-                    Text("All branches").tag("")
-                    ForEach(branchOptions) { ref in Text(ref.name).fontWeight(ref.isDefaultBranch ? .bold : .regular).tag(ref.fullName) }
+                HStack(spacing: 6) {
+                    Text("History filter").accessibilityHidden(true)
+                    BranchHistoryPicker(options: branchOptions, selectedBranch: store.branchFilter, onSelect: store.setBranch)
                 }
                 .frame(maxWidth: 220)
                 Toggle("Remotes", isOn: Binding(get: { store.includeRemotes }, set: { _ in store.toggleRemoteHistory() }))
